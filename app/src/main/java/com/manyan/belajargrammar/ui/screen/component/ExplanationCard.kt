@@ -40,9 +40,9 @@ fun ExplanationCard(onClick: () -> Unit) {
         Column {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Image(
-                    painter = painterResource(R.drawable.ic_tests),
+                    painter = painterResource(R.drawable.daily),
                     contentDescription = "Explanation",
-                    modifier = Modifier.size(48.dp)
+                    modifier = Modifier.size(56.dp)
                 )
                 Spacer(modifier = Modifier.width(12.dp))
                 Column {
@@ -63,7 +63,7 @@ fun ExplanationCard(onClick: () -> Unit) {
                 Icon(
                     painter = painterResource(R.drawable.ic_tests),
                     contentDescription = null,
-                    modifier = Modifier.size(16.dp),
+                    modifier = Modifier.size(24.dp),
                     tint = Color.White
                 )
                 Text("1000 Verbs", color = Color.White, modifier = Modifier.padding(start = 8.dp))
@@ -71,7 +71,7 @@ fun ExplanationCard(onClick: () -> Unit) {
                 Icon(
                     painter = painterResource(R.drawable.ic_explanation),
                     contentDescription = null,
-                    modifier = Modifier.size(16.dp),
+                    modifier = Modifier.size(24.dp),
                     tint = Color.White
                 )
                 Text(

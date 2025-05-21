@@ -33,4 +33,7 @@ object Routes {
     const val MISTAKE_LIST = "mistake_list"
     const val MISTAKE_ITEMS = "mistake_items/{categoryId}"
     const val MISTAKE_DETAIL = "mistake_detail/{categoryId}/{index}"
+
+    const val CERTIFICATE_QUIZ = "certificate_quiz"
+
 }

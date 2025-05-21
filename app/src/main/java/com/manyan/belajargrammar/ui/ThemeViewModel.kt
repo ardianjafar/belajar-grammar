@@ -1,18 +1,16 @@
 package com.manyan.belajargrammar.ui
 
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
 
-class ThemeViewModel {
-    private val _isDarkTheme = MutableStateFlow(false)
-    val isDarkTheme: StateFlow<Boolean> = _isDarkTheme.asStateFlow()
 
-    fun toggleTheme() {
-        _isDarkTheme.value = !_isDarkTheme.value
-    }
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
+import androidx.lifecycle.ViewModel
 
-    fun setDarkTheme(enabled  : Boolean) {
+class ThemeViewModel : ViewModel() {
+    private val _isDarkTheme = mutableStateOf(false)
+    val isDarkTheme: State<Boolean> = _isDarkTheme
+
+    fun setDarkTheme(enabled: Boolean) {
         _isDarkTheme.value = enabled
     }
 }

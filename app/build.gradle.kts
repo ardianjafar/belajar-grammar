@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("kapt")
 }
 
 android {
@@ -10,10 +11,10 @@ android {
 
     defaultConfig {
         applicationId = "com.manyan.belajargrammar"
-        minSdk = 31
+        minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 3
+        versionName = "Beta 1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -40,6 +41,8 @@ android {
     }
 }
 
+val room_version = "2.6.1"
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -60,6 +63,12 @@ dependencies {
 
     implementation("com.google.accompanist:accompanist-pager:0.32.0")
     implementation("com.google.accompanist:accompanist-pager-indicators:0.32.0")
+
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    implementation("androidx.room:room-paging:$room_version") // jika pakai paging
+    implementation("com.google.accompanist:accompanist-flowlayout:0.31.3-beta")
 
 
     testImplementation(libs.junit)
