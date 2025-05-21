@@ -2,6 +2,7 @@ package com.manyan.belajargrammar.ui.screen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -16,7 +17,7 @@ import com.manyan.belajargrammar.data.model.VerbEntry
 import com.manyan.belajargrammar.data.repository.VerbRepository
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalPagerApi::class, ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun VerbListScreen(navController: NavController) {
     val pagerState = rememberPagerState()
@@ -60,10 +61,17 @@ fun VerbListScreen(navController: NavController) {
                     }
                 }
 
+                val listState = rememberLazyListState()
+
                 Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
                     OutlinedTextField(
                         value = query,
-                        onValueChange = { query = it },
+                        onValueChange = {
+                            query = it
+                            scope.launch {
+                                listState.animateScrollToItem(0)
+                            }
+                        },
                         label = { Text("Search verb...") },
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -71,6 +79,7 @@ fun VerbListScreen(navController: NavController) {
                     TableHeader()
                     Divider(thickness = 1.dp)
                     LazyColumn(
+                        state = listState,
                         modifier = Modifier.fillMaxSize(),
                         contentPadding = PaddingValues(vertical = 8.dp),
                         verticalArrangement = Arrangement.spacedBy(4.dp)

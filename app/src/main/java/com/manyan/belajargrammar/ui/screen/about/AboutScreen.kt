@@ -1,4 +1,3 @@
-// ui/screen/AboutScreen.kt
 package com.manyan.belajargrammar.ui.screen.about
 
 import android.content.Intent
@@ -8,7 +7,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,18 +22,24 @@ import com.manyan.belajargrammar.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AboutScreen(onBackClick: () -> Boolean) {
+fun AboutScreen(onBackClick: () -> Unit) {
     val context = LocalContext.current
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("About Developer") },
+                title = {
+                    Text(
+                        text = "About Developer",
+                        color = Color.White
+                    )
+                },
                 navigationIcon = {
                     IconButton(onClick = { onBackClick() }) {
                         Icon(
                             imageVector = Icons.Default.ArrowBack,
-                            contentDescription = "Back"
+                            contentDescription = "Back",
+                            tint = Color.White
                         )
                     }
                 },
@@ -45,10 +49,16 @@ fun AboutScreen(onBackClick: () -> Boolean) {
                         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                         context.startActivity(intent)
                     }) {
-                        Icon(Icons.Default.Check, contentDescription = "Feedback", tint = Color.White)
+                        Icon(
+                            painter = painterResource(R.drawable.email),
+                            contentDescription = "Feedback",
+                            tint = Color.White
+                        )
                     }
                 },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFF0D47A1))
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color(0xFF0D47A1) // Navy blue
+                )
             )
         },
         content = { padding ->
@@ -63,8 +73,10 @@ fun AboutScreen(onBackClick: () -> Boolean) {
                 Card(
                     shape = RoundedCornerShape(16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(4.dp),
-                    modifier = Modifier.padding(horizontal = 12.dp)
+                    elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp)
                 ) {
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally,
@@ -88,9 +100,13 @@ fun AboutScreen(onBackClick: () -> Boolean) {
                         Divider()
                         Spacer(modifier = Modifier.height(16.dp))
                         Text("Developed by:", fontSize = 14.sp, color = Color.Gray)
-                        Text("Ardian Ja'far", fontSize = 16.sp, fontWeight = FontWeight.Bold)
                         Spacer(modifier = Modifier.height(8.dp))
-                        Text("Contact: ardianjafar46@gmail.com", fontSize = 12.sp, color = Color.Gray)
+                        Text(
+                            "Contact: ardianjafar46@gmail.com",
+                            fontSize = 12.sp,
+                            color = Color.Gray,
+                            textAlign = TextAlign.Center
+                        )
                     }
                 }
             }

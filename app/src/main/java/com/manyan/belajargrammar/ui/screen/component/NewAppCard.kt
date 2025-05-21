@@ -43,10 +43,11 @@ fun NewAppCard(
         modifier = Modifier
             .fillMaxWidth()
             .background(Color.White, shape = RoundedCornerShape(16.dp))
-            .clickable {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(whatsAppUrl))
-                context.startActivity(intent)
-            }
+//            .clickable {
+//                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(whatsAppUrl))
+//                context.startActivity(intent)
+//            }
+            .clickable { onClick() }
             .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
