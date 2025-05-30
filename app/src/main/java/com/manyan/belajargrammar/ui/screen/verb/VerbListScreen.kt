@@ -28,12 +28,25 @@ fun VerbListScreen(navController: NavController) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("English Verbs", fontWeight = FontWeight.Bold) },
+                title = {
+                    Text(
+                        "English Verbs",
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onPrimary
+                    )
+                },
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(
+                            imageVector = Icons.Default.ArrowBack,
+                            contentDescription = "Back",
+                            tint = MaterialTheme.colorScheme.onPrimary
+                        )
                     }
-                }
+                },
+                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary
+                )
             )
         }
     ) { innerPadding ->
@@ -51,7 +64,8 @@ fun VerbListScreen(navController: NavController) {
             }
 
             HorizontalPager(count = tabs.size, state = pagerState) { page ->
-                val allVerbs = if (page == 0) VerbRepository.irregularverbs else VerbRepository.regularverbs
+                val allVerbs =
+                    if (page == 0) VerbRepository.irregularverbs else VerbRepository.regularverbs
                 val filteredVerbs = remember(query, allVerbs) {
                     allVerbs.filter {
                         it.baseForm.contains(query, ignoreCase = true) ||
@@ -63,7 +77,11 @@ fun VerbListScreen(navController: NavController) {
 
                 val listState = rememberLazyListState()
 
-                Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(16.dp)
+                ) {
                     OutlinedTextField(
                         value = query,
                         onValueChange = {

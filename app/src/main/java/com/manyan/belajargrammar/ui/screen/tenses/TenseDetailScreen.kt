@@ -19,6 +19,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -91,12 +92,12 @@ fun TenseDetailScreen(
             SectionContent(tensesContent.signalWords)
 
             Spacer(modifier = Modifier.height(24.dp))
-            Button(
+            OutlinedButton(
                 onClick = { navController.popBackStack() },
                 modifier = Modifier.align(Alignment.End),
                 shape = MaterialTheme.shapes.large
             ) {
-                Text("Kembali")
+                Text("I learned it")
             }
         }
     }
@@ -106,16 +107,16 @@ fun TenseDetailScreen(
 @Composable
 fun SectionHeader(text: String) {
     Text(
-        text,
+        text = text,
         fontWeight = FontWeight.Bold,
         fontSize = 18.sp,
-        modifier = Modifier.padding(vertical = 12.dp)
+        modifier = Modifier.padding(vertical = 12.dp),
     )
 }
 
 @Composable
 fun SectionContent(lines: List<String>) {
     lines.forEach {
-        Text(it, fontSize = 14.sp, modifier = Modifier.padding(bottom = 4.dp))
+        Text(it, fontSize = 14.sp, modifier = Modifier.padding(bottom = 4.dp), textAlign = TextAlign.Justify)
     }
 }

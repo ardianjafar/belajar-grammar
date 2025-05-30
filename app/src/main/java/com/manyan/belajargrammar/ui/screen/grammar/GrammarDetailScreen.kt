@@ -8,16 +8,11 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.manyan.belajargrammar.data.local.entity.FavoriteGrammar
@@ -81,14 +76,27 @@ fun GrammarDetailScreen(
         ) {
             Text("1. Use of the $title", fontWeight = FontWeight.Bold)
             Spacer(Modifier.height(12.dp))
-            useCases.forEach { Text("- $it") }
+            useCases.forEach {
+                Text(text = it.title, fontWeight = FontWeight.SemiBold)
+                Spacer(Modifier.height(4.dp))
+                it.content.forEach { paragraph ->
+                    Text(text = paragraph, textAlign = TextAlign.Justify, modifier = Modifier.fillMaxWidth())
+                    Spacer(modifier = Modifier.height(8.dp))
+                }
+                Spacer(Modifier.height(12.dp))
+            }
 
             Spacer(Modifier.height(20.dp))
             Text("2. Signal Words", fontWeight = FontWeight.Bold)
-            signalWords.forEach { Text("- $it") }
+            Spacer(Modifier.height(12.dp))
+
+            signalWords.forEach { word ->
+                Text(text = "• $word")
+                Spacer(modifier = Modifier.height(8.dp))
+            }
 
             Spacer(Modifier.height(32.dp))
-            Button(
+            OutlinedButton(
                 onClick = { navController.popBackStack() },
                 modifier = Modifier.align(Alignment.End),
                 shape = MaterialTheme.shapes.large
@@ -98,3 +106,4 @@ fun GrammarDetailScreen(
         }
     }
 }
+

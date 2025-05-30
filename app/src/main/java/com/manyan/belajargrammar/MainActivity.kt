@@ -7,9 +7,9 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.rememberDrawerState
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
@@ -17,8 +17,11 @@ import androidx.room.Room
 import com.manyan.belajargrammar.data.local.database.AppDatabase
 import com.manyan.belajargrammar.data.repository.favorite.FavoriteGrammarRepository
 import com.manyan.belajargrammar.data.repository.favorite.FavoriteTenseRepository
+import com.manyan.belajargrammar.data.repository.favorite.LearnedMistakeRepository
 import com.manyan.belajargrammar.navigation.AppNavGraph
 import com.manyan.belajargrammar.ui.theme.BelajarGrammarTheme
+import com.manyan.belajargrammar.ui.viewModel.MistakeProgressViewModel
+import com.manyan.belajargrammar.ui.viewModel.MistakeProgressViewModelFactory
 import com.manyan.belajargrammar.ui.viewmodel.FavoriteGrammarViewModel
 import com.manyan.belajargrammar.ui.viewmodel.FavoriteTenseViewModel
 import com.manyan.belajargrammar.ui.ThemeViewModel as ThemeViewModel1
@@ -27,24 +30,23 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Inisialisasi Room Database
-        val database = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java,
-            "grammar_app_db"
-        ).build()
+        val database = AppDatabase.getDatabase(this)
 
-        // Inisialisasi Repository untuk fitur Favorite
+        // Inisialisasi Repository untuk fitur Favorite & Learned Mistake
         val grammarRepository = FavoriteGrammarRepository(database.favoriteDao())
         val tenseRepository = FavoriteTenseRepository(database.favoriteDao())
+        val learnedMistakeRepository = LearnedMistakeRepository(database.learnedMistakeDao())
 
+        // Inisialisasi ViewModel
         val favoriteGrammarViewModel = FavoriteGrammarViewModel(grammarRepository)
         val favoriteTenseViewModel = FavoriteTenseViewModel(tenseRepository)
+        val mistakeProgressViewModelFactory = MistakeProgressViewModelFactory(learnedMistakeRepository)
+        val mistakeProgressViewModel: MistakeProgressViewModel by viewModels { mistakeProgressViewModelFactory }
+
 
         setContent {
             val navController = rememberNavController()
             val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
-
             val themeViewModel: ThemeViewModel1 = viewModel()
             val isDarkTheme by themeViewModel.isDarkTheme
 
@@ -53,10 +55,12 @@ class MainActivity : ComponentActivity() {
                     navController = navController,
                     favoriteGrammarViewModel = favoriteGrammarViewModel,
                     favoriteTenseViewModel = favoriteTenseViewModel,
+                    mistakeProgressViewModel = mistakeProgressViewModel,
                     database = database,
                     drawerState = drawerState,
                     isDarkTheme = isDarkTheme,
-                    onToggledTheme = { themeViewModel.setDarkTheme(it) }
+                    onToggledTheme = { themeViewModel.setDarkTheme(it) },
+
                 )
             }
         }

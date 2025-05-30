@@ -14,7 +14,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -26,16 +25,30 @@ import com.manyan.belajargrammar.data.model.TensesContent
 @Composable
 fun TensesScreen(navController: NavController) {
     val tensesList = TenseRepository.tenses
+    val colorScheme = MaterialTheme.colorScheme
 
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Tenses", fontWeight = FontWeight.Bold) },
+                title = {
+                    Text(
+                        "Tenses",
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onPrimary
+                    )
+                },
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(
+                            imageVector = Icons.Default.ArrowBack,
+                            contentDescription = "Back",
+                            tint = MaterialTheme.colorScheme.onPrimary
+                        )
                     }
-                }
+                },
+                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary
+                )
             )
         }
     ) { innerPadding ->
@@ -54,9 +67,13 @@ fun TensesScreen(navController: NavController) {
 
 @Composable
 fun TenseItem(item: TensesContent, onClick: () -> Unit) {
+    val colorScheme = MaterialTheme.colorScheme
+
     Card(
         shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(
+            containerColor = colorScheme.surface
+        ),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         modifier = Modifier
             .fillMaxWidth()
@@ -70,17 +87,25 @@ fun TenseItem(item: TensesContent, onClick: () -> Unit) {
             Box(
                 modifier = Modifier
                     .size(40.dp)
-                    .border(2.dp, Color.Gray, CircleShape)
+                    .border(2.dp, colorScheme.outline, CircleShape)
                     .padding(6.dp),
                 contentAlignment = Alignment.Center
             ) {
-                Text(item.title.take(1), fontSize = 14.sp)
+                Text(
+                    text = item.title.take(1),
+                    fontSize = 14.sp,
+                    color = colorScheme.primary
+                )
             }
             Spacer(Modifier.width(12.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(item.title, fontWeight = FontWeight.Bold)
             }
-            Icon(Icons.Default.KeyboardArrowRight, contentDescription = null, tint = Color.LightGray)
+            Icon(
+                imageVector = Icons.Default.KeyboardArrowRight,
+                contentDescription = null,
+                tint = colorScheme.outline
+            )
         }
     }
 }

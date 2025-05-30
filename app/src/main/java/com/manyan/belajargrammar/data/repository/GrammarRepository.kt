@@ -11,15 +11,13 @@ object GrammarRepository {
                 Section(
                     title = "Pengertian", content = listOf(
                         """
-                        Apa itu Kata Sifat yang dalam bahasa Inggris di sebut Adjective ?
-                        Pengertian kata sifat atau adjectives adalah kata yang berfungsi untuk memberikan informasi lebih dari suatu kata benda (noun).
+                        Kata Sifat yang dalam bahasa Inggris di sebut Adjective ? Pengertian kata sifat atau adjectives adalah kata yang berfungsi untuk memberikan informasi lebih dari suatu kata benda (noun).
 
                         Kata sifat dalam bahasa Inggris pun dapat menggambarkan atau memodifikasi kata ganti (pronoun). Contoh kata sifat (adjektif) adalah beautiful (cantik), old (tua),elegant (anggun), blue (biru), dan easy (mudah).
 
                         Selain itu, kata sifat juga mampu mendeskripsikan kuantitas dari suatu kata benda. Contoh kata sifat tipe ini di antaranya many, few, dan hundreds.
                         
-                        Bagaimana Cara Membedakan Adjectives dan Adverbs?
-                        Perbedaan adjektiva dan adverbia dapat dilihat dari fungsi dan juga komponen lain yang mengikutinya. Berikut beberapa perbedaan kata sifat (adjective) dan kata keterangan (adverb):
+                        Bagaimana Cara Membedakan Adjectives dan Adverbs? Perbedaan adjektiva dan adverbia dapat dilihat dari fungsi dan juga komponen lain yang mengikutinya. Berikut beberapa perbedaan kata sifat (adjective) dan kata keterangan (adverb):
 
                         1. Kata sifat berperan sebagai tambahan informasi untuk noun (baik subjek ataupun objek) serta pronoun, sedangkan adverb berfungsi untuk menjelaskan verb, adverb, dan adjective.
 
@@ -27,7 +25,7 @@ object GrammarRepository {
 
                         3. Adjektiva dalam kalimat biasanya diikuti oleh senses of verb yang berperan sebagai linking verb atau auxiliary verb, yang mana ini berlaku saat menjelaskan noun atau pronoun sebagai subjek kalimat.
 
-                        Contoh senses of verb adalah taste, seem, sound, smell, look, feel dan lain sebagainya. Oh ya, sense of verb adalah suatu kata yang bisa dilakukan oleh panca indra makhluk hidup, guys.
+                        Contoh : senses of verb adalah taste, seem, sound, smell, look, feel dan lain sebagainya. Oh ya, sense of verb adalah suatu kata yang bisa dilakukan oleh panca indra makhluk hidup, guys.
 
                         4. Secara umum, adverb bentuknya bisa jadi adjective jika pada akhir kata ditambah akhiran –ly. Sebagai contohnya quick (adjective) menjadi quickly (adverb), sad (adjective) menjadi sadly (adverb), simple (adjective) menjadi simply (adverb), final (adjective) menjadi finally (adverb), dan lain sebagainya.
                         
@@ -38,10 +36,9 @@ object GrammarRepository {
 
                         2. Kata sifat memberi tahu kita lebih banyak tentang noun, sedangkan kata kerja memberikan kita pemaparan lebih tentang kondisi, pengalaman, pikiran, atau keadaan suatu subjek.
                         
-                        Jenis-Jenis Kata Sifat Bahasa Inggris 
-                        Ada 7 jenis kata sifat dalam bahasa Inggris yang harus kamu pahami.
+                        Terdapat 7 jenis kata sifat dalam bahasa Inggris yang harus kamu pahami.
 
-                        Jenis-jenis adjectives tersebut adalah absolute adjectives, attributive and predicative adjectives, appositive adjectives, comparative and superlative adjectives, compound adjectives, demonstrative adjectives, denominal adjectives, dan participial adjectives.
+                        Jenis-jenis adjectives tersebut adalah - absolute adjectives, - attributive and - predicative adjectives, - appositive adjectives, - comparative and - superlative adjectives, - compound adjectives, - demonstrative adjectives, - denominal adjectives, dan - participial adjectives.
 
                         Yuk, pahami masing-masing penjelasan beserta contohnya di bawah ini!
                         
@@ -53,7 +50,7 @@ object GrammarRepository {
                         - Henry is starving. (Henry kelaparan)
                         - Dinosaurs are extinct. (Dinosaurus punah)
                          
-                        Contoh kata sifat di atas adalah kata sifat absolut karena tidak dapat dibandingkan. Kita tidak bisa mengatakan, “That boy is deader than the girl” (anak laki-laki itu lebih meninggal daripada gadis itu).
+                        Contoh : kata sifat di atas adalah kata sifat absolut karena tidak dapat dibandingkan. Kita tidak bisa mengatakan, “That boy is deader than the girl” (anak laki-laki itu lebih meninggal daripada gadis itu).
 
                         Kita tidak bisa mengatakan seseorang is deader (lebih meninggal) daripada seseorang. Kita juga tidak bisa mengatakan seseorang is the deadest (paling meninggal) dalam sekelompok kata benda.
                         
@@ -80,18 +77,126 @@ object GrammarRepository {
                         - She grew cold toward him
                         - That dress looks beautiful on you
                         - They seemed bored at the party
+                        
+                        3. Appositive Adjectives, adalah istilah gramatikal tradisional untuk kata sifat atau serangkaian kata sifat yang mengikuti kata benda, dan biasanya diawali dengan koma atau tanda hubung. Contoh kalimat adjective-nya adalah :
+                        - “Lisa is a tall, slim, strong and, short haired girl.” (Lisa adalah perempuan yang tinggi, langsing, kuat dan berambut pendek.)
+                        - “The decision was unfair, unacceptable, and illogical.” (Keputusannya tidak adil, tidak dapat diterima dan tidak logis.)
+                        - “The men’s uniform which was very wrinkled, dirty, and smelly, was thrown away.” (Seragam pria yang sangat kusut, kotor dan bau itu dibuangnya.)
+                        
+                        4. Comparative and Superlative Adjectives,  adalah bentuk dari kata sifat yang berfungsi untuk membandingkan sesuatu, lebih baik atau lebih buruk, lebih banyak atau lebih sedikit, juga lebih besar atau lebih kecil.
+                        
+                        Berdasarkan maknanya dalam bahasa Inggris, comparative adjectives ditandai dengan sufiks alias akhiran –er, atau menggunakan kata more atau less.
+
+                        Hampir semua kata sifat dengan satu suku kata dan beberapa kata sifat dengan dua suku kata dapat menggunakan sufiks –er sebagai penanda comparative adjectives.
+
+                        Sementara itu, banyak kata sifat dengan dua suku kata atau lebih menggunakan kata more or less untuk menandakan comparative adjectives. Berikut contoh kalimat adjective-nya:
+
+                        “It’s easier to read than to write”. (Lebih mudah membaca daripada menulis)
+                        “Compare to the last knife, this one is very good, sharper and harmless.” (Dibandingkan dengan pisau sebelumnya, pisau ini sangat bagus, lebih tajam dan tidak berbahaya.)
+                        “My new house is way more beautiful compare to my old one. I’m so blissful.” (Rumah baruku jauh lebih indah dibandingkan dengan rumahku yang dulu. Aku penuh kebahagiaan.)
+                        “My nephew is younger than my son.” (Keponakan laki-lakiku lebih muda daripada anak laki-lakiku.)
+                        
+                        Seperti comparative adjectives, superlative adjectives ditandai dengan sufiks –est untuk hampir seluruh kata sifat bahasa Inggris satu suku kata dan beberapa kata sifat dua suku kata.
+
+                        Sementara itu, untuk kata sifat bahasa Inggris yang memiliki dua suku kata atau lebih, penanda superlative adjective diidentifikasi dengan kata most atau least.
+
+                        Setelah menggunakan superlative, kita dapat membubuhi kata in atau of ditambah frasa benda untuk mengindikasikan kata benda tersebut sedang dibandingkan. Perhatikan contoh kalimat di bawah ini:
+
+                        - The slowest animal in the world is the sloth. (hewan paling lambat di dunia adalah sloth)
+                        - Franky was the most impolite and the most not friendly person in the office. His words are very offensive. (Franky adalah orang yang paling tidak sopan dan paling tidak ramah di kantor. Perkataannya sangat menyakiti hati.)
+                        - Being chased by a bear is the most terrifying thing I’ve ever experienced. (Dikejar beruang adalah hal yang paling menakutkan yang pernah aku alami.)
+                        
+                        5. Compund Adjectives adalah dua kata sifat atau lebih yang menggambarkan suatu keadaan kata benda. Compound adjectives biasa disebut juga sebagai frasa sifat. Aturan umumnya, jika dua kata sifat atau lebih berada sebelum kata benda, maka harus menggunakan tanda penghubung.
+                        
+                        Sementara itu, jika letaknya setelah kata benda, maka tidak dibutuhkan tanda penghubung. Lalu, compound adjectives yang terbentuk dari adverb dengan sufiks –ly biasanya tidak menggunakan kata penghubung. Contohnya ada pada kalimat berikut:
+                        
+                        - Johnny Depp is a well-known actor. (Johnny Depp adalah aktor yang terkenal.)
+                        - The actor that played Harry Potter is well known. (Aktor yang memerankan Harry Potter terkenal.)
+                        - That snail is slowly moving. (Siput itu bergerak perlahan.)
+                        
+                        6. Demonstrative adjectives adalah penentu (determiner) yang digunakan untuk menunjukkan kata benda khusus. Terkadang, demonstrative adjective disebut juga sebagai demonstrative determiner. Dalam bahasa Inggris, terdapat 4 bentuk demonstrative, yaitu sebagai berikut:
+                        - Demonstratives yang menggambarkan kata benda itu dekat: this dan these
+                        - Demonstratives yang menggambarkan kata benda itu jauh: that dan those
+                        - Demonstratives yang menggambarkan kata benda itu berjumlah tunggal: this dan that
+                        - Demonstratives yang menggambarkan kata benda itu berjumlah jamak: these dan those
+                        
+                        Berikut adalah contoh kalimatnya:
+                        - “Can you put these socks into that basket?” (Bisakah kamu memasukkan kaus kaki ini ke dalam keranjang itu?)
+                        - “Do you know those people?” (Apakah kamu kenal orang-orang itu?)
+                        - “I love this book!” (Aku suka sekali buku ini!)
+                        
+                        7. Denominal adjectives adalah bentuk dari kata benda yang biasanya memiliki sufiks sehingga menjadikannya kata sifat seperti kata benda hope dengan sufiks -less. Atau kata benda child dengan sufiks -ish. Berikut contoh kalimatnya:
+
+                        - “Our future is kinda hopeless, don’t you think?” (Masa depan kita tidak ada harapan, tidak kah kamu berpikir demikian?)
+                        - “Even though Trudy is jobless and clueless about work environment, she’s a zestful and a very responsible mom.” (Meskipun Trudy tidak punya pekerjaan dan tidak berpengetahuan mengenai lingkungan kerja, dia adalah ibu yang penuh semangat dan penuh tanggung jawab)
+                        - “Ben is 30 years old and humble, but he’s childish.” (Ben berumur 30 tahun dan rendah hati, tapi ia kekanak-kanakkan.)
+                        - “I feel guilty because I was being bossy.” (Aku merasa berdosa karena aku suka merintah.)
+                        
+                        8. Participial adjectives adalah kata sifat dalam bahasa Inggris yang berasal dari kata kerja dengan sufiks -ing, –ed atau -en. Misalnya dari kata kerja lie ditambah akhiran -ing, atau burn dengan sufiks –ed. Berikut adalah contoh kalimat adjective-nya:
+
+                        - “The lying thief was caught last night.” (Si pencuri pembohong ditangkap tadi malam.)
+                        - “A concerned father came to see me today.” (Seorang ayah yang khawatir datang mengunjungi saya hari ini)
+                        - “Her house was burned.” (Rumahnya kebakaran.)
+                        
                     """.trimIndent()
                     )
                 )
-            ), signalWords = listOf("beautiful", "quick", "happy")
+            ), signalWords = listOf(
+                "Active = aktif",
+                "Adorable = Menggemaskan",
+                "Adventurous = Petualang",
+                "Affectionate = Penyayang",
+                "Aggressive = Agresif",
+                "Alert = Waspada",
+                "Ambitious = Ambisius",
+                "Amused = Tertawa",
+                "Angry = Marah",
+                "Anxious = Cemas",
+                "Ashamed = Malu",
+                "Attractive = Menarik",
+                "Average = Rata-rata",
+                "Awful = Mengerikan",
+                "Bad = Buruk",
+                "Beutiful = Indah",
+                "Bitter = Pahit",
+                "Brave = Berani",
+                "Bright = Terang",
+                "Calm = Tenang",
+                "Careful = Hati-hati",
+                "Charming = Memikat",
+                "Cheerful = Ceria",
+                "Clean = Bersih",
+                "Clever = Pandai",
+                "Clumsy = Canggung",
+                "Cold = Dingin",
+                "Colorful = Berwarna",
+                "Comfortable = Nyaman",
+                "Confused = Bingung",
+                "Cozy = Nyaman",
+                " Crazy = Gila",
+                "Creative = Kreatif",
+                "Crowded = Ramai",
+                "Cruel = Kejam ",
+                "Curious = Penasaran",
+                "Cute = Lucu",
+                "Dangerous = Berbahasaya",
+                "Dark = Gelap",
+                "Dead = Mati",
+                "Deep = Dalam",
+                "Defeated = Kalah",
+                "Delighted = Senang Sekali",
+                "Depressed = Depresi",
+                "Determined = Bertekad",
+                "quick = cepat",
+                "happy = senang"
+            )
         ),
         GrammarContent(
             route = "Adverb", title = "Adverb", useCases = listOf(
                 Section(
                     title = "Pengertian", content = listOf(
                         """
-                      Apa yang Dimaksud dengan Adverb?
-                      Adverb adalah kata keterangan atau kata tambahan yang memberikan gambaran lebih jelas dan detail untuk verb (kata kerja), adjective (kata sifat), atau adverb yang lainnya. Beberapa kata keterangan juga dapat memodifikasi frasa, klausa, atau bahkan memodifikasi keseluruhan kalimat.
+                      Apa yang Dimaksud dengan Adverb ? Adverb adalah kata keterangan atau kata tambahan yang memberikan gambaran lebih jelas dan detail untuk verb (kata kerja), adjective (kata sifat), atau adverb yang lainnya. Beberapa kata keterangan juga dapat memodifikasi frasa, klausa, atau bahkan memodifikasi keseluruhan kalimat.
                       
                       Apa Fungsi dari Adverb? Seperti pada penjelasan di atas, adverb berfungsi untuk menjelaskan kata kerja, kata sifat, sentence, noun phrase, atau adverb yang lainnya. Jadi kalau kamu bertanya, kapan harus menggunakan adverb? Yap, kamu dapat menggunakannya untuk memberikan informasi yang lebih jelas sesuai dengan tujuan dari kalimat itu sendiri sebagai contoh.
                       - Untuk menerangkan kata kerja ? Sintya can run fast atau You speak Japanese fluently
@@ -104,10 +209,28 @@ object GrammarRepository {
                          - Quickly      - Loudly
                          - Slowly       - Fluently
                       2. Adverb of Place, digunakan untuk menerangkan tempat terjadinya suatu peristiwa seperti (At home, In Solo, Here, There dsb)
-                      3.Adverb of Time, digunakan untuk menerangkan waktu terjadinya suatu peristiwa seperti (At 5 o'clock, A week ago, Every night, In the morning)
+                      3.Adverb of Time, digunakan untuk menerangkan waktu terjadinya suatu peristiwa seperti (At 5 o'clock, A week ago, Every night, In the morning) atau juga keterangan waktu untuk menjelaskan kapan atau berapa lama suatu tindakan terjadi.
+                      
+                      Dalam bahasa Inggris, keterangan waktu ini biasa menjawab pertanyaan when (kapan) dan how long (durasi). Oh ya, kamu bisa menuliskan adverb of time pada awal atau akhir kalimat, yang mana posisi akhir biasanya berfungsi sebagai sebuah penekanan.
+                      
                       4.Adverb of Frequecy, digunakan untuk menerangkan seberapa sering kita melakukan suatu kegiatan dalam kehidupan sehari-hari seperti (Always, Usually, Often, Seldom, Sometimes, Never)
                       
-                      Pembentukan Adverb pada umumnya dibentuk dengan menambahkan akhiran (-ly) pada kata sifat. Tetapi ada juga beberapa kata keterangan yang bentuknya sama dengan kata sifat seperti (bad - badly, correct - correctly, loud - loudly)
+                      5. Adverb of Degree, adalah kata keterangan yang dapat kita gunakan untuk memberitahu seseorang mengenai sebuah tingkatan atau intensitas sesuatu yang terjadi. Dalam hal ini, intensitas yang dimaksud contohnya seperti “seberapa banyak” atau “sejauh mana” sesuatu dilakukan (level or extent). Berikut contoh adverb of degree:
+                        - Sangat sangat banyak:  Fully, highly, totally, absolutely, completely, excessively, intensely
+                        - Sangat banyak: Very much, positively, really, truly, simply, moderately, noticeably
+                        - Tidak banyak: Hardly, barely
+                        
+                      6. Adverb of Modality, Kehidupan di dunia ini nggak terlepas dari harapan, guys. Nah, untuk memperlihatkan tingkat suatu keyakinan atau harapan, kamu bisa menggunakan adverb of modality. Kalimat tanya yang tepat digunakan untuk menjawab kalimat ini adalah how do you feel, what you feel, dan what is your feel.
+
+                        Contoh kata keterangan modality antara lain likely, maybe, perhaps, possibly, unlikely, hopefully, probably, dan fortunately. Fyi, adverb yang satu ini biasanya diletakkan pada awal atau tengah kalimat. Berikut contoh kalimatnya:
+                        - Fortunately the rain stopped before she was going out.
+                            (Untungnya hujan berhenti sebelum dia keluar.)
+                        - He didn’t come to my party, maybe he was tired because of his office tasks.
+                            (Dia tidak datang ke pestaku, mungkin dia lelah karena tugas kantornya.)
+                        - Perhaps I will not come to your graduation.
+                            (Mungkin aku tidak akan datang ke wisudamu.)
+                        Pembentukan Adverb pada umumnya dibentuk dengan menambahkan akhiran (-ly) pada kata sifat. Tetapi ada juga beberapa kata keterangan yang bentuknya sama dengan kata sifat seperti (bad - badly, correct - correctly, loud - loudly)
+                        
                     """.trimIndent()
                     )
                 )
@@ -131,9 +254,13 @@ object GrammarRepository {
                         
                         Apa saja jenis-jenis verb dalam bahasa inggris dan bagaimana penggunaannya ?
                         1. Action Verbs, kata kerja yang merujuk pada tindakan yang kamu lakukan dan bisa terlihat oleh orang lain seperti (I swim with my nieces, We run this morning, They are talking about the new math teacher) selain aksi nyata, action verbs meliputi berbagai kenyataan yang didasari oleh pikiran dan perasaan kamu seperti (I consider to let him go, We change the vacation schedule,They ignore us).
+                        
                         2. Stative Verbs, kata kerja ini adalah kebalikan dari Action verbs dengan kata lain mendeskripsikan keadaan subjek yang mengandalkan persaan seperti (I love you, We want you to accompany us too, You like to eat sandwiches, We dislike any disruption)
+                        
                         3. Transitive verbs, kata kerja yang menerangkan direct object (objek langsung) yang telah dilakukan oleh subjek seperti (James kicked the ball, The wealthy man bought three paintings,She baked the banana bread)
+                        
                         4. Intransitive verb, kata kerja yang tidak menerangkan direct object (objek langsung) dari apa yang dilakukan oleh subjek seperti (She lives in a quiet neighborhood, I slept all day)
+                        
                         5. Linking verbs, kata kerja yang berfungsi sebagai penghubung antara subjek dan informasi lebih lanjut tentang subjek tersebut seperti (Appear, Become, Feel, Get, Grow)
                     """.trimIndent()
                     )

@@ -110,17 +110,6 @@ fun MainScreen(
                     Text("CERTIFICATE", color = Color.White, fontSize = 14.sp)
                     Spacer(modifier = Modifier.height(8.dp))
 
-//                    NewAppCard(
-//                        title = "TAKE A TEST",
-//                        description = "Test your English now for Free!!",
-//                        icon = R.drawable.certificate,
-//                        onClick = {
-//                            val url = "https://wa.me/6282245959024?text=" +
-//                                    Uri.encode("Halo saya tertarik untuk mengikuti tes IELTS pada aplikasi Belajar Grammar, bagaimana saya daftar untuk jadwal tes tersebut ?")
-//                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-//                        }
-//                    )
-
                     NewAppCard(
                         title = "Quiz English",
                         description = "Test your English simple Question!!",

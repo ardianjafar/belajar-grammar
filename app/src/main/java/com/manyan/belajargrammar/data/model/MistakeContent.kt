@@ -14,7 +14,7 @@ data class MistakeContent(
     val id: String,
     val title: String,
     val total: Int,
-    val learned: Int,
+    var learned: Int = 0,
     val items: List<MistakeItem>
 )
 

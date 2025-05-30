@@ -200,6 +200,40 @@ object VerbRepository {
         VerbEntry("Chew", "Chewed", "Chewed", "Mengunyah"),
         VerbEntry("Circulate", "Circulated", "Circulated", "Mengedarkan"),
         VerbEntry("Claim", "Claimed", "Claimed", "Menuntut"),
+
+
+    VerbEntry("Clarify", "Clarified", "Clarified", "Menjelaskan"),
+    VerbEntry("Classify", "Classified", "Classified", "Menggolongkan"),
+    VerbEntry("Climb", "Climbed", "Climbed", "Memanjat"),
+    VerbEntry("Close", "Closed", "Closed", "Menutup"),
+    VerbEntry("Compile", "Compiled", "Compiled", "Menyusun"),
+    VerbEntry("Complicate", "Complicated", "Complicated", "Menyulitkan"),
+    VerbEntry("Conceal", "Concealed", "Concealed", "Menyembunyikan"),
+    VerbEntry("Conduct", "Conducted", "Conducted", "Melakukan"),
+    VerbEntry("Confirm", "Confirmed", "Confirmed", "Menegaskan"),
+    VerbEntry("Connect", "Connected", "Connected", "Menghubungkan"),
+
+    VerbEntry("Consign", "Consigned", "Consigned", "Mengirimkan"),
+    VerbEntry("Consume", "Consumed", "Consumed", "Mengkonsumsi"),
+    VerbEntry("Cook", "Cooked", "Cooked", ""),
+    VerbEntry("Charter", "Charterred", "Charterred", "Mencarter"),
+    VerbEntry("Chat", "Chatted", "Chatted", "Mengobrol"),
+    VerbEntry("Cheat", "Cheated", "Cheated", "Menipu"),
+    VerbEntry("Check", "Checked", "Checked", "Memeriksa"),
+    VerbEntry("Chew", "Chewed", "Chewed", "Mengunyah"),
+    VerbEntry("Circulate", "Circulated", "Circulated", "Mengedarkan"),
+    VerbEntry("Claim", "Claimed", "Claimed", "Menuntut"),
+
+    VerbEntry("Carry", "Carried", "Carried", "Membawa"),
+    VerbEntry("Celebrate", "Celebrated", "Celebrated", "Merayakan"),
+    VerbEntry("Change", "Changed", "Changed", "Mengganti"),
+    VerbEntry("Charter", "Charterred", "Charterred", "Mencarter"),
+    VerbEntry("Chat", "Chatted", "Chatted", "Mengobrol"),
+    VerbEntry("Cheat", "Cheated", "Cheated", "Menipu"),
+    VerbEntry("Check", "Checked", "Checked", "Memeriksa"),
+    VerbEntry("Chew", "Chewed", "Chewed", "Mengunyah"),
+    VerbEntry("Circulate", "Circulated", "Circulated", "Mengedarkan"),
+    VerbEntry("Claim", "Claimed", "Claimed", "Menuntut"),
 )
 
 

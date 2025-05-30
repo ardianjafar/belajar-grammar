@@ -1,9 +1,11 @@
 package com.manyan.belajargrammar.ui.screen.grammar
 
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -12,7 +14,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -28,12 +29,25 @@ fun GrammarScreen(navController: NavController) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Grammar", fontWeight = FontWeight.Bold) },
+                title = {
+                    Text(
+                        "Grammar",
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onPrimary
+                    )
+                },
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(
+                            imageVector = Icons.Default.ArrowBack,
+                            contentDescription = "Back",
+                            tint = MaterialTheme.colorScheme.onPrimary
+                        )
                     }
-                }
+                },
+                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary
+                )
             )
         }
     ) { innerPadding ->
@@ -52,9 +66,12 @@ fun GrammarScreen(navController: NavController) {
 
 @Composable
 fun GrammarItem(item: GrammarContent, onClick: () -> Unit) {
+    val colorScheme = MaterialTheme.colorScheme
     Card(
         shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(
+            containerColor = colorScheme.surface
+        ),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         modifier = Modifier
             .fillMaxWidth()
@@ -68,16 +85,29 @@ fun GrammarItem(item: GrammarContent, onClick: () -> Unit) {
             Box(
                 modifier = Modifier
                     .size(40.dp)
+                    .border(2.dp, colorScheme.outline, CircleShape)
                     .padding(6.dp),
                 contentAlignment = Alignment.Center
             ) {
-                Text(item.title.take(1), fontSize = 14.sp)
+                Text(
+                    item.title.take(1),
+                    fontSize = 14.sp,
+                    color = colorScheme.primary
+                )
             }
             Spacer(Modifier.width(12.dp))
             Column(modifier = Modifier.weight(1f)) {
-                Text(item.title, fontWeight = FontWeight.Bold)
+                Text(
+                    item.title,
+                    fontWeight = FontWeight.Bold,
+                    color = colorScheme.onSurface
+                )
             }
-            Icon(Icons.Default.KeyboardArrowRight, contentDescription = null, tint = Color.LightGray)
+            Icon(
+                imageVector = Icons.Default.KeyboardArrowRight,
+                contentDescription = null,
+                tint = colorScheme.onSurface.copy(alpha = 0.6f)
+            )
         }
     }
 }

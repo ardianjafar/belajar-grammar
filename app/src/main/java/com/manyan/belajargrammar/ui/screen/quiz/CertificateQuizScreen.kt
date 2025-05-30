@@ -20,9 +20,10 @@ fun CertificateQuizScreen(navController: NavHostController) {
     var currentPage by remember { mutableStateOf(0) }
     val questionsPerPage = 5
     val totalPages = (allQuestions.size + questionsPerPage - 1) / questionsPerPage
-    val selectedAnswers = remember { mutableStateListOf<Int?>().apply { repeat(allQuestions.size) { add(null) } } }
-    val context = LocalContext.current
+    val selectedAnswers =
+        remember { mutableStateListOf<Int?>().apply { repeat(allQuestions.size) { add(null) } } }
     var showErrors by remember { mutableStateOf(false) }
+    val context = LocalContext.current
 
     val currentQuestions = allQuestions.drop(currentPage * questionsPerPage).take(questionsPerPage)
 
@@ -47,14 +48,12 @@ fun CertificateQuizScreen(navController: NavHostController) {
             ) {
                 itemsIndexed(currentQuestions) { index, question ->
                     val globalIndex = currentPage * questionsPerPage + index
-                    val showError = showErrors && selectedAnswers[globalIndex] == null
-
                     QuizQuestionCard(
                         question = question,
                         questionIndex = globalIndex,
                         selectedAnswer = selectedAnswers[globalIndex],
                         onAnswerSelected = { selectedAnswers[globalIndex] = it },
-                        showError = showError
+                        showError = showErrors && selectedAnswers[globalIndex] == null
                     )
                 }
             }
@@ -67,20 +66,22 @@ fun CertificateQuizScreen(navController: NavHostController) {
                     .padding(horizontal = 16.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
+                // Previous button
                 if (currentPage > 0) {
-                    Button(onClick = { currentPage-- }) {
+                    OutlinedButton(onClick = { currentPage-- }) {
                         Text("Previous")
                     }
                 }
 
-                val isPageComplete = currentQuestions.indices.all { localIndex ->
+                val isCurrentPageComplete = currentQuestions.indices.all { localIndex ->
                     val globalIndex = currentPage * questionsPerPage + localIndex
-                    selectedAnswers.getOrNull(globalIndex) != null
+                    selectedAnswers[globalIndex] != null
                 }
 
+                // Next or Submit button
                 if (currentPage < totalPages - 1) {
-                    Button(onClick = {
-                        if (!isPageComplete) {
+                    OutlinedButton(onClick = {
+                        if (!isCurrentPageComplete) {
                             showErrors = true
                             Toast.makeText(
                                 context,
@@ -95,9 +96,10 @@ fun CertificateQuizScreen(navController: NavHostController) {
                         Text("Next")
                     }
                 } else {
-                    Button(onClick = {
-                        val isAllAnswered = selectedAnswers.none { it == null }
-                        if (!isAllAnswered) {
+                    OutlinedButton(onClick = {
+                        val isAllComplete = selectedAnswers.none { it == null }
+
+                        if (!isAllComplete) {
                             showErrors = true
                             Toast.makeText(
                                 context,
@@ -106,22 +108,28 @@ fun CertificateQuizScreen(navController: NavHostController) {
                             ).show()
                         } else {
                             showErrors = false
-                            val score = allQuestions.zip(selectedAnswers)
-                                .count { (q, a) -> q.correctAnswerIndex == a }
+                            // Kalkulasi yang benar berdasarkan seluruh jawaban
+                            val score = selectedAnswers.mapIndexed { index, answer ->
+                                if (answer == allQuestions[index].correctAnswerIndex) 1 else 0
+                            }.sum()
+
                             Toast.makeText(
                                 context,
                                 "You got $score out of ${allQuestions.size} correct!",
                                 Toast.LENGTH_LONG
                             ).show()
                         }
-                    }) {
+                    })
+                    {
                         Text("Submit")
                     }
                 }
             }
+
             Spacer(modifier = Modifier.height(16.dp))
         }
     }
 }
+
 
 

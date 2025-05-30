@@ -76,6 +76,9 @@ fun DrawerContent(
         DrawerItem("Contact Us", R.drawable.email) {
             onMenuClick("contact")
         }
+//        DrawerItem("Reset App", R.drawable.email) {
+//            onMenuClick("reset_app")
+//        }
     }
 }
 

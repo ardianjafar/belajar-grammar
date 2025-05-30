@@ -13,7 +13,8 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -24,13 +25,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.manyan.belajargrammar.data.repository.MistakeRepository
+import com.manyan.belajargrammar.ui.viewModel.MistakeProgressViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MistakeListScreen(
     navController: NavHostController,
-    onBackClick: () -> Unit
+    onBackClick: () -> Unit,
+    viewModel: MistakeProgressViewModel,
 ) {
+
+    val learnedMistake by viewModel.learnedMistakes.collectAsState()
+    val categories = MistakeRepository.mistakes
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -49,8 +56,9 @@ fun MistakeListScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp)
         ) {
-            val categories = MistakeRepository.mistakes
             categories.forEach { category ->
+                val learnedCount = learnedMistake.count { it.startsWith(category.id) }
+
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -63,7 +71,7 @@ fun MistakeListScreen(
                     Column(Modifier.padding(16.dp)) {
                         Text(text = category.title, fontWeight = FontWeight.Bold)
                         Text(
-                            text = "${category.learned} learned / ${category.total} items",
+                            text = "$learnedCount learned / ${category.total} items",
                             style = MaterialTheme.typography.bodyMedium
                         )
                     }

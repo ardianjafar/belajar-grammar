@@ -6,6 +6,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.manyan.belajargrammar.data.local.entity.FavoriteGrammar
 import com.manyan.belajargrammar.data.local.entity.FavoriteTenses
+import com.manyan.belajargrammar.data.local.entity.LearnedMistakeEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -36,4 +37,6 @@ interface FavoriteDao {
 
     @Query("SELECT * FROM favorite_tenses")
     fun getFavoriteTenseList(): Flow<List<FavoriteTenses>>
+
+
 }

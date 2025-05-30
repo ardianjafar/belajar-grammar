@@ -442,4 +442,12 @@ object MistakeRepository {
             return category?.items?.getOrNull(index)
         }
 
+    fun incrementLearned(categoryId: String) {
+        mistakes.find { it.id == categoryId }?.let {
+            if (it.learned < it.total) {
+                it.learned++
+            }
+        }
+    }
+
 }
